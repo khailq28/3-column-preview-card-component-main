@@ -1,0 +1,136 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 920px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--light-gray);
+}
+
+#card1 {
+    background-image: url("../images/3-column-preview-card-component-main/icon-sedans.svg");
+    background-color: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+#card2 {
+    background-image: url("../images/3-column-preview-card-component-main/icon-suvs.svg");
+    background-color: var(--dark-cyan);
+}
+
+#card3 {
+    background-image: url("../images/3-column-preview-card-component-main/icon-luxury.svg");
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50px 50px;
+    padding: 130px 50px 50px 50px;
+}
+
+.card .title {
+    font-size: 35px;
+    font-family: "Big Shoulders Display", sans-serif;
+}
+
+.card .detail {
+    opacity: 90%;
+    line-height: 1.5;
+    margin-top: 40px;
+}
+
+.card .button {
+    background-color: var(--light-gray);
+    width: 150px;
+    padding: 18px 30px;
+    border-radius: 30px;
+    margin-top: 90px;
+    cursor: pointer;
+    border: 3px solid var(--light-gray);
+    transition: all 0.2s ease-in-out;
+}
+
+#card1 .button {
+    color: var(--bright-orange);
+}
+
+#card2 .button {
+    color: var(--dark-cyan);
+}
+
+#card3 .button {
+    color: var(--very-dark-cyan);
+}
+
+.card .button:hover {
+    color: var(--light-gray) !important;
+}
+
+#card1 .button:hover {
+    background-color: var(--bright-orange);
+}
+
+#card2 .button:hover {
+    background-color: var(--dark-cyan);
+}
+
+#card3 .button:hover {
+    background-color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 920px) {
+    .wrapper {
+        height: auto;
+    }
+
+    .container {
+        width: 330px;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    #card1 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #card3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
